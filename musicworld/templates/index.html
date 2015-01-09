@@ -152,7 +152,7 @@ subMenu.style.display = "none";
 				{% if a %}
 				<div class="vol-item-lg">
 					<a href="{% url 'musicworld:pdetail' a.id %}" class="cover-wrapper cover-wrapper-lg">
-						<img src="http://localhost:8000/media/{{a.image}}"  class="cover-lg rounded">
+						<img src="/media/{{a.image}}"  class="cover-lg rounded">
 						<span class="icon-play-lg"></span>
 						<div class="play-btn-mask"></div>
 					</a>
@@ -163,7 +163,7 @@ subMenu.style.display = "none";
 				{% if b %}
 					<div class="vol-item">
 						<a href="{% url 'musicworld:pdetail' b.id %}" class="cover-wrapper">
-							<img src="http://localhost:8000/media/{{b.image}}"  class="cover rounded">
+							<img src="/media/{{b.image}}"  class="cover rounded">
 							<span class="icon-play"></span>
 							<div class="play-btn-mask"></div>
 						</a>
