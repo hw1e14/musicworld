@@ -87,10 +87,10 @@ width:120px;
             </a>
             <div class="nav">
                 <ul class="clearfix">
-                    <li><a href="http://localhost:8000/musicworld/periodical">Periodicals</a></li>
-                    <li><a href="http://localhost:8000/musicworld/article/">Articles</a></li>
-                    <li><a href="http://localhost:8000/musicworld/video/">Videos</a></li>
-                    <li><a href="http://localhost:8000/musicworld/contact/">Contact</a></li>         
+                    <li><a href="/musicworld/periodical">Periodicals</a></li>
+                    <li><a href="/musicworld/article/">Articles</a></li>
+                    <li><a href="/musicworld/video/">Videos</a></li>
+                    <li><a href="/musicworld/contact/">Contact</a></li>         
 
                 </ul>
 
@@ -164,7 +164,7 @@ subMenu.style.display = "none";
                             {% for periodical in latest_periodical_list %}
                         <div class="item">
                             <a href="{% url 'musicworld:pdetail' periodical.id %}" class="cover-wrapper" title="">
-                                <img src="http://localhost:8000/media/{{periodical.image}}" alt="" class="cover rounded">
+                                <img src="/media/{{periodical.image}}" alt="" class="cover rounded">
                             </a>
                             <div class="meta rounded clearfix">
                                 <a href="{% url 'musicworld:pdetail' periodical.id %}" class="name" title="">vol.{{periodical.id}} {{periodical.name}}</a>
