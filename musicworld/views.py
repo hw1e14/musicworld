@@ -61,7 +61,9 @@ def regist(req):
             password = uf.cleaned_data['password']
             #add into database
             User.objects.create(username= username,password=password)
-            return HttpResponse('regist success!!')
+            response = HttpResponseRedirect('/musicworld/index/')
+            response.set_cookie('username',username,3600)
+            return response
     else:
         uf = UserForm()
     return render_to_response('regist.html',{'uf':uf}, context_instance=RequestContext(req))
