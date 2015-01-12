@@ -56,11 +56,11 @@ subMenu.style.display = "none";
 <body> 
 <ul id="navigation"> 
 <li onMouseOver="displaySubMenu(this)" onMouseOut="hideSubMenu(this)"> 
-<a href="#">Welcome {{username}}!</a> 
+<a href="#">Welcome,{{username}}!</a> 
 <ul> 
-<li><a href="#">Edit Profile</a></li> 
+<li><a href="/musicworld/user">Edit Profile</a></li> 
 <li><a href="/musicworld/login">Sign out</a></li> 
-</ul>         
+</ul>        
 </div>
  </a>		
 </div>
@@ -88,7 +88,7 @@ subMenu.style.display = "none";
 							{% if latest_article_list %}
 								<ul>
     						{% for article in latest_article_list %}
-    						<p>{{article.likes}}people like this article</p>
+    						<p>{{article.likes}} people like this article</p>
     						
 							<div class="item">
 								<a href="" class="cover-wrapper">
@@ -149,7 +149,7 @@ subMenu.style.display = "none";
 				<div class="widget">
 					<div class="widget-ct">
 						<a href="/musicworld/article/create" class="ln-widget-block rounded">
-							Make Your Article
+							Upload Your Article
 						</a>
 					</div>
 				</div>
